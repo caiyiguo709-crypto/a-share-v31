@@ -1,0 +1,297 @@
+{
+  "collected_at": "2026-10-11T20:02:59+08:00",
+  "source": "AKShare / 东方财富、新浪；腾讯仅作独立接口探测",
+  "calendar_end": null,
+  "requests": [
+    {
+      "interface": "tool_trade_date_hist_sina",
+      "parameters": {},
+      "collected_at": "2026-10-11T20:02:35+08:00",
+      "status": "timeout",
+      "error": "request_timeout",
+      "duration_seconds": 15.02,
+      "key": "calendar"
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "000001",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:35+08:00",
+      "status": "timeout",
+      "error": "request_timeout",
+      "duration_seconds": 15.02,
+      "key": "index:000001"
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "399001",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:35+08:00",
+      "status": "timeout",
+      "error": "request_timeout",
+      "duration_seconds": 15.01,
+      "key": "index:399001"
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "399006",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:50+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 9.24,
+      "key": "index:399006"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "601001",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:50+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 1.13,
+      "key": "stock:601001"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "000983",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:50+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 1.14,
+      "key": "stock:000983"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "600267",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:51+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 0.54,
+      "key": "stock:600267"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002312",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:51+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 0.54,
+      "key": "stock:002312"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002602",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:51+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.54,
+      "key": "stock:002602"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002354",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:51+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.53,
+      "key": "stock:002354"
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "000066",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:52+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.51,
+      "key": "stock:000066"
+    },
+    {
+      "interface": "stock_zh_a_spot_em",
+      "parameters": {},
+      "collected_at": "2026-10-11T20:02:52+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 5.4,
+      "key": "metadata"
+    },
+    {
+      "interface": "stock_sector_fund_flow_rank",
+      "parameters": {
+        "indicator": "今日",
+        "sector_type": "行业资金流"
+      },
+      "collected_at": "2026-10-11T20:02:52+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.55,
+      "key": "sector_probe"
+    },
+    {
+      "interface": "stock_zh_a_hist_tx",
+      "parameters": {
+        "symbol": "sh601001",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:02:53+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "date",
+        "open",
+        "close",
+        "high",
+        "low",
+        "volume",
+        "turnover",
+        "amount"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 0.93,
+      "key": "tencent_probe"
+    }
+  ],
+  "data_quality": {
+    "market_pass": false,
+    "stocks_pass": 0,
+    "expected_quote_date": null
+  }
+}

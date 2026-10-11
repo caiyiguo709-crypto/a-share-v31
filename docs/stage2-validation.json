@@ -1,0 +1,19 @@
+{
+  "stage": 2,
+  "python_tests": 103,
+  "js_syntax": "passed",
+  "real_request_cases": 42,
+  "real_request_ok": 18,
+  "real_request_failed": 24,
+  "real_research_permissions": 0,
+  "public_buy_permissions": 0,
+  "actual_historical_performance_verified": false,
+  "synthetic_replay": "explicit_demo_only",
+  "mobile_width": 390,
+  "desktop_width": 1280,
+  "private_publication": "excluded",
+  "remote_repository_created": false,
+  "site_published": false,
+  "next_stage_requires_confirmation": true,
+  "publishing_requires_separate_confirmation": true
+}

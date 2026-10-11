@@ -1,0 +1,45 @@
+# ARCHITECTURE TEMPLATE ONLY. Not recognized by GitHub Actions.
+# Activate only after explicit user approval and configuring required reviewer
+# for github-pages. Stage 1 never enables this file.
+name: Approved Pages publication
+on:
+  workflow_dispatch:
+    inputs:
+      approve_publication:
+        description: 'Explicit approval to publish public market analysis'
+        type: boolean
+        default: false
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: inputs.approve_publication
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.lock
+      - run: python -m pytest -q
+      - run: python -m ashare.cli build --mode live
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

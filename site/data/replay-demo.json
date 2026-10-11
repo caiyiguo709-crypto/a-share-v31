@@ -1,0 +1,487 @@
+{
+  "schema_version": "backtest-2",
+  "kind": "simulated_only",
+  "mode": "demo",
+  "source": "合成演示，非真实历史行情",
+  "start_date": "2026-08-10",
+  "end_date": "2026-10-09",
+  "metrics": {
+    "initial_capital": 5000,
+    "ending_equity": 4974.87,
+    "net_return_pct": -0.5026,
+    "max_drawdown_pct": 1.2527,
+    "closed_trades": 8,
+    "win_rate_pct": 25.0,
+    "total_fees": 94.13,
+    "open_positions": 2,
+    "data_complete_for_held_positions": true
+  },
+  "equity_curve": [
+    {
+      "date": "2026-08-10",
+      "equity_cents": 500000,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-11",
+      "equity_cents": 498798,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-12",
+      "equity_cents": 499398,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-13",
+      "equity_cents": 500098,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-14",
+      "equity_cents": 500798,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-17",
+      "equity_cents": 501498,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-18",
+      "equity_cents": 502098,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-19",
+      "equity_cents": 502698,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-20",
+      "equity_cents": 503098,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-21",
+      "equity_cents": 503598,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-24",
+      "equity_cents": 503798,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-25",
+      "equity_cents": 501600,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-26",
+      "equity_cents": 501800,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-27",
+      "equity_cents": 501900,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-28",
+      "equity_cents": 502100,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-08-31",
+      "equity_cents": 502100,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-01",
+      "equity_cents": 502100,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-02",
+      "equity_cents": 502000,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-03",
+      "equity_cents": 502000,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-04",
+      "equity_cents": 501900,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-07",
+      "equity_cents": 502000,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-08",
+      "equity_cents": 499319,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-09",
+      "equity_cents": 499119,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-10",
+      "equity_cents": 498919,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-11",
+      "equity_cents": 498719,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-14",
+      "equity_cents": 498719,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-15",
+      "equity_cents": 498719,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-16",
+      "equity_cents": 498919,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-17",
+      "equity_cents": 499319,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-18",
+      "equity_cents": 499719,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-21",
+      "equity_cents": 500519,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-22",
+      "equity_cents": 498387,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-23",
+      "equity_cents": 498987,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-24",
+      "equity_cents": 499487,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-25",
+      "equity_cents": 499887,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-28",
+      "equity_cents": 500187,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-29",
+      "equity_cents": 500387,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-09-30",
+      "equity_cents": 500487,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-01",
+      "equity_cents": 500487,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-02",
+      "equity_cents": 500387,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-05",
+      "equity_cents": 500287,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-06",
+      "equity_cents": 497487,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-07",
+      "equity_cents": 497587,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-08",
+      "equity_cents": 497587,
+      "stale_marks": []
+    },
+    {
+      "date": "2026-10-09",
+      "equity_cents": 497487,
+      "stale_marks": []
+    }
+  ],
+  "trades": [
+    {
+      "side": "BUY",
+      "date": "2026-08-11",
+      "signal_date": "2026-08-10",
+      "code": "000066",
+      "shares": 100,
+      "price": 9.5,
+      "notional_cents": 95000,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-08-10:000066",
+      "synthetic": true,
+      "planned_risk_cents": 4248
+    },
+    {
+      "side": "BUY",
+      "date": "2026-08-11",
+      "signal_date": "2026-08-10",
+      "code": "002354",
+      "shares": 100,
+      "price": 8.73,
+      "notional_cents": 87300,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-08-10:002354",
+      "synthetic": true,
+      "planned_risk_cents": 3844
+    },
+    {
+      "side": "SELL",
+      "date": "2026-08-25",
+      "code": "000066",
+      "shares": 100,
+      "price": 9.74,
+      "notional_cents": 97400,
+      "fee_cents": 550,
+      "reason": "max_10_sessions",
+      "pnl_cents": 1349,
+      "buy_date": "2026-08-11"
+    },
+    {
+      "side": "SELL",
+      "date": "2026-08-25",
+      "code": "002354",
+      "shares": 100,
+      "price": 8.98,
+      "notional_cents": 89800,
+      "fee_cents": 546,
+      "reason": "max_10_sessions",
+      "pnl_cents": 1453,
+      "buy_date": "2026-08-11"
+    },
+    {
+      "side": "BUY",
+      "date": "2026-08-25",
+      "signal_date": "2026-08-24",
+      "code": "000066",
+      "shares": 100,
+      "price": 9.76,
+      "notional_cents": 97600,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-08-24:000066",
+      "synthetic": true,
+      "planned_risk_cents": 4149
+    },
+    {
+      "side": "BUY",
+      "date": "2026-08-25",
+      "signal_date": "2026-08-24",
+      "code": "000983",
+      "shares": 100,
+      "price": 5.88,
+      "notional_cents": 58800,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-08-24:000983",
+      "synthetic": true,
+      "planned_risk_cents": 3430
+    },
+    {
+      "side": "SELL",
+      "date": "2026-09-08",
+      "code": "000066",
+      "shares": 100,
+      "price": 9.7,
+      "notional_cents": 97000,
+      "fee_cents": 549,
+      "reason": "max_10_sessions",
+      "pnl_cents": -1650,
+      "buy_date": "2026-08-25"
+    },
+    {
+      "side": "SELL",
+      "date": "2026-09-08",
+      "code": "000983",
+      "shares": 100,
+      "price": 5.94,
+      "notional_cents": 59400,
+      "fee_cents": 530,
+      "reason": "max_10_sessions",
+      "pnl_cents": -431,
+      "buy_date": "2026-08-25"
+    },
+    {
+      "side": "BUY",
+      "date": "2026-09-08",
+      "signal_date": "2026-09-07",
+      "code": "000983",
+      "shares": 200,
+      "price": 5.96,
+      "notional_cents": 119200,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-09-07:000983",
+      "synthetic": true,
+      "planned_risk_cents": 3860
+    },
+    {
+      "side": "BUY",
+      "date": "2026-09-08",
+      "signal_date": "2026-09-07",
+      "code": "600267",
+      "shares": 200,
+      "price": 6.71,
+      "notional_cents": 134200,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-09-07:600267",
+      "synthetic": true,
+      "planned_risk_cents": 4068
+    },
+    {
+      "side": "SELL",
+      "date": "2026-09-22",
+      "code": "000983",
+      "shares": 200,
+      "price": 5.96,
+      "notional_cents": 119200,
+      "fee_cents": 561,
+      "reason": "max_10_sessions",
+      "pnl_cents": -1062,
+      "buy_date": "2026-09-08"
+    },
+    {
+      "side": "SELL",
+      "date": "2026-09-22",
+      "code": "600267",
+      "shares": 200,
+      "price": 6.76,
+      "notional_cents": 135200,
+      "fee_cents": 569,
+      "reason": "max_10_sessions",
+      "pnl_cents": -70,
+      "buy_date": "2026-09-08"
+    },
+    {
+      "side": "BUY",
+      "date": "2026-09-22",
+      "signal_date": "2026-09-21",
+      "code": "000066",
+      "shares": 100,
+      "price": 10.01,
+      "notional_cents": 100100,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-09-21:000066",
+      "synthetic": true,
+      "planned_risk_cents": 4950
+    },
+    {
+      "side": "BUY",
+      "date": "2026-09-22",
+      "signal_date": "2026-09-21",
+      "code": "002354",
+      "shares": 100,
+      "price": 9.2,
+      "notional_cents": 92000,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-09-21:002354",
+      "synthetic": true,
+      "planned_risk_cents": 4646
+    },
+    {
+      "side": "SELL",
+      "date": "2026-10-06",
+      "code": "000066",
+      "shares": 100,
+      "price": 10.04,
+      "notional_cents": 100400,
+      "fee_cents": 551,
+      "reason": "max_10_sessions",
+      "pnl_cents": -752,
+      "buy_date": "2026-09-22"
+    },
+    {
+      "side": "SELL",
+      "date": "2026-10-06",
+      "code": "002354",
+      "shares": 100,
+      "price": 9.29,
+      "notional_cents": 92900,
+      "fee_cents": 547,
+      "reason": "max_10_sessions",
+      "pnl_cents": -148,
+      "buy_date": "2026-09-22"
+    },
+    {
+      "side": "BUY",
+      "date": "2026-10-06",
+      "signal_date": "2026-10-05",
+      "code": "000983",
+      "shares": 100,
+      "price": 6.16,
+      "notional_cents": 61600,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-10-05:000983",
+      "synthetic": true,
+      "planned_risk_cents": 3131
+    },
+    {
+      "side": "BUY",
+      "date": "2026-10-06",
+      "signal_date": "2026-10-05",
+      "code": "002312",
+      "shares": 100,
+      "price": 7.75,
+      "notional_cents": 77500,
+      "fee_cents": 501,
+      "reason": "next_session_open",
+      "signal_key": "2026-10-05:002312",
+      "synthetic": true,
+      "planned_risk_cents": 3239
+    }
+  ],
+  "warnings": [
+    "合成演示仅测试流程，不能作为投资收益证据"
+  ]
+}

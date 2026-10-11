@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashare-v31"
+version = "0.2.0"
+description = "5000元A股研究与模拟终端 · 第二阶段 · 无真实下单"
+requires-python = ">=3.11"
+dependencies = ["akshare==1.19.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "PyYAML>=6,<7"]
+
+[tool.setuptools.packages.find]
+include = ["ashare*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

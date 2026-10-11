@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="description" content="A股日线研究观察终端。第二阶段，本地模拟交易，无真实下单。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
+<title>5000 · A股观察终端 V3.1</title>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body id="top">
+<header class="topbar"><a class="brand" href="#top"><span class="mark">五</span><span>5000<span class="brand-sub">A股观察终端</span></span></a><div class="top-status"><span class="dot"></span>本地研究 / 阶段 02 <span class="version">V3.1</span></div></header>
+<main>
+<div class="intro"><div><div class="eyebrow">MARKET INTELLIGENCE / DAILY</div><h1>先观察，再决策<span>。</span></h1><p>用数据约束判断，用风险约束仓位。</p></div><div class="mode-control"><label for="mode">数据视图</label><select id="mode"><option value="live">真实接口采集</option><option value="demo">合成演示 · 禁止交易</option></select><button id="refresh" class="icon-button" title="重新读取本地JSON">↻ 读取</button></div></div>
+<section class="notice" aria-live="polite"><div class="notice-icon">!</div><div><strong id="notice-title">正在读取行情快照</strong><p id="notice-text">公开研究结果需本地账户复核；模拟账本不进入公开页面。</p></div><span class="lock">仅研究 / 无真实下单</span></section>
+<div class="metadata"><span id="source">数据来源 —</span><span id="quote-date">完整交易日 —</span><span id="collected">采集时间 —</span><span id="delay">非实时</span></div>
+<section class="indices" id="indices" aria-label="三大指数"></section>
+<div class="dashboard">
+<div class="main-column">
+<section class="panel watch-panel"><div class="panel-heading"><div><span class="eyebrow">WATCHLIST</span><h2>初始观察池 <span class="count">07</span></h2></div><button id="export" class="text-button" disabled>导出公开JSON ↗</button></div><div class="filters"><button class="filter active" data-filter="all">全部自选</button><button class="filter" data-filter="candidate">回踩候选</button><button class="filter" data-filter="blocked">风险阻断</button><span>综合 / 100 · 缺项仅显示技术小计 / 60</span></div><div class="stock-table"><div class="table-head"><span>股票 / 代码</span><span>收盘 / 涨跌</span><span>近30日</span><span>评分</span><span>观察状态</span></div><div id="stocks"><p class="empty">等待数据载入</p></div></div><div class="panel-foot">仅限 600 / 601 / 603 / 000 / 001 / 002 · 点击个股查看指标与阻断原因</div></section>
+<section class="panel plans"><div class="panel-heading"><div><span class="eyebrow">RISK FIRST</span><h2>交易计划</h2></div><span class="tag">仅模型测算</span></div><div id="plans"></div><p class="footnote">各标的为独立测算，非同时买入组合；最多持有2只。价格取日线收盘，仅作股数约束演示。次日需重新核验成交价与账户状态。T+1、跳空、跌停会使实际损失超过50元。</p></section>
+</div>
+<aside>
+<section class="panel sentiment"><div class="panel-heading"><div><span class="eyebrow">MARKET REGIME</span><h2>市场情绪</h2></div><span class="tag">实验规则</span></div><div class="regime"><span id="cycle">?</span><div><strong id="cycle-name">等待核验</strong><p id="cycle-note">指数条件未确认</p></div></div><div class="regime-scale"><span>A 趋势共振</span><span>B 分化</span><span>C 防御</span></div><p class="footnote">A：三指数均在MA20上方且MACD为正；B：1–2个满足；C：无指数满足。数据不合格则无法判断。</p></section>
+<section class="panel"><div class="panel-heading"><div><span class="eyebrow">SECTOR FLOW</span><h2>行业资金主线</h2></div></div><div id="sector-list" class="pending"><strong>等待数据核验</strong><p>仅分析自选股所属行业；缺失资金数据不补分。</p></div></section>
+<section class="panel constraints"><div class="panel-heading"><div><span class="eyebrow">MODEL PARAMETERS</span><h2>策略约束</h2></div></div><dl><div><dt>模型本金</dt><dd>¥5,000</dd></div><div><dt>最多标的</dt><dd>2只</dd></div><div><dt>单标的预算</dt><dd>¥2,500</dd></div><div><dt>单笔计划风险</dt><dd>¥50</dd></div><div><dt>买入单位 / 卖出约束</dt><dd>100股 / T+1</dd></div></dl><p class="footnote">这里是策略公开参数，非真实账户。实际资产、持仓及个人信息不进入公开JSON。</p></section>
+</aside></div>
+<section class="panel replay-panel"><div class="panel-heading"><div><span class="eyebrow">PRIVATE SIMULATION / NEXT SESSION</span><h2>回测与模拟交易</h2></div><button id="interfaces" class="text-button">查看接口测试 ↗</button></div><p class="footnote">前日收盘形成信号，下一交易日模拟成交。检查T+1、最多2只、费用及滑点。真实时点快照积累不足，尚无真实历史收益结论。</p><div class="replay-controls"><button id="load-demo-replay" class="text-button">查看合成演示回放 ↗</button><label class="file-label" for="report-file">本地打开模拟报告<input type="file" id="report-file" accept=".json,application/json"></label></div><p id="report-status" class="footnote" aria-live="polite">本地报告仅在浏览器内读取，不上传；公开演示回放使用虚构行情。</p><div id="replay-results"></div><details class="local-guide"><summary>本地模拟命令与数据要求</summary><p>在项目根目录运行。账本、归档与回测报告留在 private/；只接受连续、开盘前已采集的逐日快照。</p><pre>python -m ashare.cli paper-init
+python -m ashare.cli build --mode live --archive
+python -m ashare.cli paper-run --signal-raw private/signal.json --execution-raw private/execution.json
+python -m ashare.cli export-trades
+python -m ashare.cli backtest --archive private/archive --sensitivity</pre><p>signal.json 和 execution.json 为相邻交易日的原始快照路径示例。演示回测需额外指定 --demo --allow-synthetic。以上命令仅作模拟记账。</p></details></section>
+<footer><span>5000 / A-SHARE INTELLIGENCE</span><span>日线研究工具 · 无真实下单 · 网站尚未发布</span></footer>
+</main>
+<dialog id="detail"><button class="close" aria-label="关闭">×</button><div id="detail-content"></div></dialog>
+</body></html>

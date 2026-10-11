@@ -1,0 +1,84 @@
+# Python environments, dependency caches and build outputs
+.venv/
+venv/
+env/
+ENV/
+.uv-cache/
+uv-cache/
+node_modules/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+
+# Private account state, market archives and local exports
+private/
+raw_data/
+backups/
+*.ledger.json
+paper-ledger*.json
+*-ledger.json
+trades*.csv
+qa-trades*.csv
+
+# Secrets and machine-specific configuration (no example exceptions)
+.env*
+.netrc
+.git-credentials
+.npmrc
+.pypirc
+.aws/
+.ssh/
+.config/
+.agents/
+.codex/
+secrets/
+credentials/
+config.local.*
+*.local.json
+credentials*.json
+secrets*.json
+secrets*.yaml
+secrets*.yml
+tokens*.json
+auth*.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+
+# Local diagnostic evidence contains local paths and environment details.
+# Keep reports on disk; preserve the original diagnostic source scripts in Git.
+/docs/stage3-1/*
+!/docs/stage3-1/*.py
+/docs/github-link-audit/
+/docs/stage3-2a/*
+!/docs/stage3-2a/*.py
+
+# Logs, temporary files, editor state and OS metadata
+logs/
+*.log
+*.tmp
+*.pid
+*.swp
+*.swo
+*.bak
+*.orig
+.DS_Store
+._*
+.idea/
+.vscode/
+
+# requirements.lock is a public reproducibility manifest and stays tracked.

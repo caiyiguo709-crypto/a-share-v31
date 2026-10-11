@@ -1,0 +1,769 @@
+{
+  "schema_version": "2.0",
+  "stage": 2,
+  "version": "V3.1 · Stage 2",
+  "generated_at": "2026-10-11T21:14:20+08:00",
+  "collected_at": "2026-10-11T21:14:20+08:00",
+  "expected_quote_date": "2026-10-09",
+  "mode": "demo",
+  "source": "本地合成演示：人工价格、资金流、名称、日历及行业；非真实行情",
+  "latency": "完整日线收盘分析，非实时；下一交易日执行前须重新核验",
+  "stale_collection": false,
+  "valid_until": "2026-10-12T16:00:00+08:00",
+  "market": {
+    "cycle": "A",
+    "bullish_indices": 3,
+    "quality_pass": true,
+    "description": "三指数趋势共振（实验规则）"
+  },
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "quality": [],
+      "indicators": {
+        "ma5": 3819.0,
+        "ma10": 3807.75,
+        "ma20": 3785.25,
+        "ma30": 3762.75,
+        "close": 3828.0,
+        "dif": 31.472385,
+        "dea": 31.459393,
+        "macd": 0.025983,
+        "volume_ratio": 1.000295,
+        "change_pct": 0.117693
+      },
+      "quote_date": "2026-10-09",
+      "provenance": {}
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "quality": [],
+      "indicators": {
+        "ma5": 12730.0,
+        "ma10": 12692.5,
+        "ma20": 12617.5,
+        "ma30": 12542.5,
+        "close": 12760.0,
+        "dif": 104.90795,
+        "dea": 104.864644,
+        "macd": 0.086612,
+        "volume_ratio": 1.000295,
+        "change_pct": 0.117693
+      },
+      "quote_date": "2026-10-09",
+      "provenance": {}
+    },
+    {
+      "code": "399006",
+      "name": "创业板指数",
+      "quality": [],
+      "indicators": {
+        "ma5": 2546.0,
+        "ma10": 2538.5,
+        "ma20": 2523.5,
+        "ma30": 2508.5,
+        "close": 2552.0,
+        "dif": 20.98159,
+        "dea": 20.972929,
+        "macd": 0.017322,
+        "volume_ratio": 1.000295,
+        "change_pct": 0.117693
+      },
+      "quote_date": "2026-10-09",
+      "provenance": {}
+    }
+  ],
+  "stocks": [
+    {
+      "code": "601001",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 5.356,
+        "ma10": 5.322,
+        "ma20": 5.2535,
+        "ma30": 5.228667,
+        "close": 5.37,
+        "dif": 0.063957,
+        "dea": 0.056633,
+        "macd": 0.014648,
+        "volume_ratio": 1.0,
+        "change_pct": 0.186567
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 25,
+        "entry": 20,
+        "account": 15
+      },
+      "score": 100,
+      "technical_subtotal": 60,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "趋势回踩（候选）",
+      "model_plan": {
+        "shares": 200,
+        "entry": 5.37,
+        "stop": 5.24,
+        "estimated_buy": 5.38,
+        "estimated_stop_fill": 5.23,
+        "cost": 1081.01,
+        "planned_loss": 40.54
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "合成演示数据禁止交易"
+      ],
+      "chart": [
+        5.16,
+        5.17,
+        5.18,
+        5.18,
+        5.19,
+        5.19,
+        5.19,
+        5.18,
+        5.18,
+        5.17,
+        5.17,
+        5.17,
+        5.16,
+        5.17,
+        5.17,
+        5.18,
+        5.19,
+        5.2,
+        5.21,
+        5.23,
+        5.25,
+        5.27,
+        5.29,
+        5.31,
+        5.32,
+        5.34,
+        5.35,
+        5.36,
+        5.36,
+        5.37
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "000983",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 6.154,
+        "ma10": 6.125,
+        "ma20": 6.044,
+        "ma30": 6.011,
+        "close": 6.16,
+        "dif": 0.07277,
+        "dea": 0.066819,
+        "macd": 0.011902,
+        "volume_ratio": 1.0,
+        "change_pct": 0.0
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 25,
+        "entry": 20,
+        "account": 15
+      },
+      "score": 100,
+      "technical_subtotal": 60,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "趋势回踩（候选）",
+      "model_plan": {
+        "shares": 200,
+        "entry": 6.16,
+        "stop": 6.02,
+        "estimated_buy": 6.17,
+        "estimated_stop_fill": 6.01,
+        "cost": 1239.01,
+        "planned_loss": 42.62
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "合成演示数据禁止交易"
+      ],
+      "chart": [
+        5.94,
+        5.95,
+        5.95,
+        5.95,
+        5.95,
+        5.95,
+        5.95,
+        5.94,
+        5.94,
+        5.93,
+        5.93,
+        5.93,
+        5.93,
+        5.94,
+        5.94,
+        5.96,
+        5.97,
+        5.99,
+        6.01,
+        6.03,
+        6.05,
+        6.08,
+        6.1,
+        6.12,
+        6.13,
+        6.14,
+        6.15,
+        6.16,
+        6.16,
+        6.16
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "600267",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 6.95,
+        "ma10": 6.927,
+        "ma20": 6.838,
+        "ma30": 6.794333,
+        "close": 6.95,
+        "dif": 0.080387,
+        "dea": 0.077253,
+        "macd": 0.006269,
+        "volume_ratio": 1.0,
+        "change_pct": 0.0
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 25,
+        "entry": 20,
+        "account": 15
+      },
+      "score": 100,
+      "technical_subtotal": 60,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "趋势回踩（候选）",
+      "model_plan": {
+        "shares": 200,
+        "entry": 6.95,
+        "stop": 6.81,
+        "estimated_buy": 6.96,
+        "estimated_stop_fill": 6.8,
+        "cost": 1397.01,
+        "planned_loss": 42.7
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "合成演示数据禁止交易"
+      ],
+      "chart": [
+        6.71,
+        6.72,
+        6.72,
+        6.72,
+        6.71,
+        6.71,
+        6.7,
+        6.7,
+        6.69,
+        6.69,
+        6.69,
+        6.69,
+        6.7,
+        6.71,
+        6.73,
+        6.75,
+        6.77,
+        6.79,
+        6.82,
+        6.84,
+        6.86,
+        6.89,
+        6.91,
+        6.92,
+        6.94,
+        6.95,
+        6.95,
+        6.95,
+        6.95,
+        6.95
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "002312",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 7.738,
+        "ma10": 7.725,
+        "ma20": 7.632,
+        "ma30": 7.576,
+        "close": 7.73,
+        "dif": 0.085714,
+        "dea": 0.086099,
+        "macd": -0.00077,
+        "volume_ratio": 1.0,
+        "change_pct": -0.129199
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 20,
+        "entry": 20,
+        "account": 15
+      },
+      "score": 95,
+      "technical_subtotal": 55,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "趋势回踩（候选）",
+      "model_plan": {
+        "shares": 200,
+        "entry": 7.73,
+        "stop": 7.57,
+        "estimated_buy": 7.74,
+        "estimated_stop_fill": 7.56,
+        "cost": 1553.02,
+        "planned_loss": 46.79
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "合成演示数据禁止交易"
+      ],
+      "chart": [
+        7.48,
+        7.48,
+        7.48,
+        7.47,
+        7.47,
+        7.46,
+        7.45,
+        7.45,
+        7.45,
+        7.45,
+        7.45,
+        7.46,
+        7.48,
+        7.5,
+        7.52,
+        7.54,
+        7.57,
+        7.6,
+        7.62,
+        7.65,
+        7.68,
+        7.7,
+        7.71,
+        7.73,
+        7.74,
+        7.74,
+        7.74,
+        7.74,
+        7.74,
+        7.73
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "002602",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 8.516,
+        "ma10": 8.513,
+        "ma20": 8.4255,
+        "ma30": 8.355667,
+        "close": 8.5,
+        "dif": 0.087695,
+        "dea": 0.09328,
+        "macd": -0.01117,
+        "volume_ratio": 1.0,
+        "change_pct": -0.117509
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 20,
+        "entry": 0,
+        "account": 15
+      },
+      "score": 75,
+      "technical_subtotal": 35,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "无确认买点",
+      "model_plan": {
+        "shares": 200,
+        "entry": 8.5,
+        "stop": 8.33,
+        "estimated_buy": 8.51,
+        "estimated_stop_fill": 8.32,
+        "cost": 1707.02,
+        "planned_loss": 48.87
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "买点未确认",
+        "五维总分未达到80/100或数据缺项",
+        "合成演示数据禁止交易"
+      ],
+      "chart": [
+        8.24,
+        8.23,
+        8.23,
+        8.22,
+        8.21,
+        8.21,
+        8.2,
+        8.2,
+        8.21,
+        8.21,
+        8.23,
+        8.24,
+        8.26,
+        8.29,
+        8.32,
+        8.35,
+        8.38,
+        8.41,
+        8.44,
+        8.46,
+        8.48,
+        8.5,
+        8.52,
+        8.52,
+        8.53,
+        8.53,
+        8.52,
+        8.52,
+        8.51,
+        8.5
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "002354",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 9.292,
+        "ma10": 9.298,
+        "ma20": 9.219,
+        "ma30": 9.135333,
+        "close": 9.28,
+        "dif": 0.089166,
+        "dea": 0.09933,
+        "macd": -0.020327,
+        "volume_ratio": 1.0,
+        "change_pct": 0.0
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 10,
+        "entry": 0,
+        "account": 15
+      },
+      "score": 65,
+      "technical_subtotal": 25,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "无确认买点",
+      "model_plan": {
+        "shares": 100,
+        "entry": 9.28,
+        "stop": 9.1,
+        "estimated_buy": 9.29,
+        "estimated_stop_fill": 9.09,
+        "cost": 934.01,
+        "planned_loss": 30.47
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "买点未确认",
+        "五维总分未达到80/100或数据缺项",
+        "合成演示数据禁止交易",
+        "趋势条件未通过"
+      ],
+      "chart": [
+        8.99,
+        8.98,
+        8.97,
+        8.96,
+        8.96,
+        8.95,
+        8.95,
+        8.96,
+        8.97,
+        8.99,
+        9.01,
+        9.03,
+        9.06,
+        9.09,
+        9.12,
+        9.16,
+        9.19,
+        9.22,
+        9.25,
+        9.27,
+        9.29,
+        9.3,
+        9.31,
+        9.31,
+        9.31,
+        9.31,
+        9.3,
+        9.29,
+        9.28,
+        9.28
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    },
+    {
+      "code": "000066",
+      "name": "合成标的",
+      "quote_date": "2026-10-09",
+      "quality": [],
+      "indicators": {
+        "ma5": 10.058,
+        "ma10": 10.072,
+        "ma20": 10.0085,
+        "ma30": 9.913333,
+        "close": 10.05,
+        "dif": 0.087775,
+        "dea": 0.10236,
+        "macd": -0.02917,
+        "volume_ratio": 1.0,
+        "change_pct": 0.0
+      },
+      "scores": {
+        "industry": 20,
+        "funds": 20,
+        "trend": 10,
+        "entry": 0,
+        "account": 15
+      },
+      "score": 65,
+      "technical_subtotal": 25,
+      "industry": "合成示例行业",
+      "hot_phase": "延续",
+      "flow": {
+        "date": "2026-10-09",
+        "net_today": 1000000.0,
+        "net_5d": 5000000.0,
+        "pct_today": 3.0,
+        "positive_days": 5
+      },
+      "buy_point": "无确认买点",
+      "model_plan": {
+        "shares": 100,
+        "entry": 10.05,
+        "stop": 9.85,
+        "estimated_buy": 10.07,
+        "estimated_stop_fill": 9.84,
+        "cost": 1012.01,
+        "planned_loss": 33.51
+      },
+      "research_permission": false,
+      "buy_permission": false,
+      "permission_scope": "仅研究条件；模拟账户须在本地重新核验现金、持仓、T+1与执行价格",
+      "blockers": [
+        "买点未确认",
+        "五维总分未达到80/100或数据缺项",
+        "合成演示数据禁止交易",
+        "趋势条件未通过"
+      ],
+      "chart": [
+        9.73,
+        9.72,
+        9.71,
+        9.71,
+        9.7,
+        9.71,
+        9.71,
+        9.73,
+        9.74,
+        9.77,
+        9.8,
+        9.83,
+        9.86,
+        9.9,
+        9.94,
+        9.97,
+        10.0,
+        10.03,
+        10.05,
+        10.07,
+        10.08,
+        10.09,
+        10.09,
+        10.09,
+        10.08,
+        10.07,
+        10.06,
+        10.06,
+        10.05,
+        10.05
+      ],
+      "provenance": {
+        "selected_source": "合成示例",
+        "checked_sources": [
+          "合成示例A",
+          "合成示例B"
+        ],
+        "fixture_only": true
+      }
+    }
+  ],
+  "sector": {
+    "status": "ready",
+    "description": "自选行业范围的相对强度与带日期资金流；不代表全市场资金排名",
+    "items": [
+      {
+        "name": "合成示例行业",
+        "quality": [],
+        "score": 20,
+        "hot_phase": "延续",
+        "return_5d_pct": 0.738,
+        "flow": {
+          "date": "2026-10-09",
+          "net_today": 1000000.0,
+          "net_5d": 5000000.0,
+          "pct_today": 3.0,
+          "positive_days": 5
+        },
+        "mainline": true,
+        "source": "synthetic_fixture",
+        "quote_date": "2026-10-09"
+      }
+    ]
+  },
+  "model_constraints": {
+    "capital": 5000,
+    "positions_max": 2,
+    "risk_per_trade": 50,
+    "position_budget": 2500,
+    "label": "策略模型假设，非真实账户"
+  },
+  "warnings": [
+    "公开研究条件不等于实际买入许可；模拟账本仅在本地",
+    "50元为计划风险，T+1、跳空及跌停可能导致超额损失",
+    "原始价格用于趋势与成交；公司行为窗口未处理时禁止新开仓",
+    "所有演示及演示回测使用合成数据，不能作为收益证据"
+  ],
+  "interface_report": []
+}

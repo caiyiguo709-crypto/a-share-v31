@@ -1,0 +1,720 @@
+{
+  "collected_at": "2026-10-11T20:08:49+08:00",
+  "source": "AKShare / 东方财富、新浪；腾讯仅作独立接口探测",
+  "calendar_end": "2026-12-31",
+  "requests": [
+    {
+      "interface": "tool_trade_date_hist_sina",
+      "parameters": {},
+      "collected_at": "2026-10-11T20:08:19+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 8797,
+      "fields": [
+        "trade_date"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 0.87,
+      "key": "calendar",
+      "attempt_count": 1,
+      "attempt_history": [
+        {
+          "interface": "tool_trade_date_hist_sina",
+          "parameters": {},
+          "collected_at": "2026-10-11T20:08:19+08:00",
+          "status": "ok",
+          "error": null,
+          "rows": 8797,
+          "fields": [
+            "trade_date"
+          ],
+          "akshare_version": "1.19.1",
+          "duration_seconds": 0.87
+        }
+      ]
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "000001",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:26+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 6.47,
+      "key": "index:000001",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "000001",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:19+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 6.91
+        },
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "000001",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:26+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 6.47
+        }
+      ]
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "399001",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:26+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 8.43,
+      "key": "index:399001",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "399001",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:19+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 6.23
+        },
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "399001",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:26+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 8.43
+        }
+      ]
+    },
+    {
+      "interface": "index_zh_a_hist",
+      "parameters": {
+        "symbol": "399006",
+        "period": "daily",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:25+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 6.77,
+      "key": "index:399006",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "399006",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:20+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 5.07
+        },
+        {
+          "interface": "index_zh_a_hist",
+          "parameters": {
+            "symbol": "399006",
+            "period": "daily",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:25+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 6.77
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "601001",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:33+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.68,
+      "key": "stock:601001",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "601001",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:32+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.53
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "601001",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:33+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.68
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "000983",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:34+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 1.15,
+      "key": "stock:000983",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "000983",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:33+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.62
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "000983",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:34+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.15
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "600267",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:34+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 1.21,
+      "key": "stock:600267",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "600267",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:33+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.85
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "600267",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:34+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.21
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002312",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:35+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.68,
+      "key": "stock:002312",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002312",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:34+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.66
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002312",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:35+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.68
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002602",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:37+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.67,
+      "key": "stock:002602",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002602",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:35+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.41
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002602",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:37+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.67
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "002354",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:37+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 0.69,
+      "key": "stock:002354",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002354",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:35+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.12
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "002354",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:37+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.69
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist",
+      "parameters": {
+        "symbol": "000066",
+        "period": "daily",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:37+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 1.62,
+      "key": "stock:000066",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "000066",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:36+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.98
+        },
+        {
+          "interface": "stock_zh_a_hist",
+          "parameters": {
+            "symbol": "000066",
+            "period": "daily",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:37+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 1.62
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_spot_em",
+      "parameters": {},
+      "collected_at": "2026-10-11T20:08:43+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 5.99,
+      "key": "metadata",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_spot_em",
+          "parameters": {},
+          "collected_at": "2026-10-11T20:08:37+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 5.91
+        },
+        {
+          "interface": "stock_zh_a_spot_em",
+          "parameters": {},
+          "collected_at": "2026-10-11T20:08:43+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 5.99
+        }
+      ]
+    },
+    {
+      "interface": "stock_sector_fund_flow_rank",
+      "parameters": {
+        "indicator": "今日",
+        "sector_type": "行业资金流"
+      },
+      "collected_at": "2026-10-11T20:08:38+08:00",
+      "status": "error",
+      "error": "ProxyError",
+      "rows": 0,
+      "fields": [],
+      "akshare_version": null,
+      "duration_seconds": 5.66,
+      "key": "sector_probe",
+      "attempt_count": 2,
+      "attempt_history": [
+        {
+          "interface": "stock_sector_fund_flow_rank",
+          "parameters": {
+            "indicator": "今日",
+            "sector_type": "行业资金流"
+          },
+          "collected_at": "2026-10-11T20:08:37+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 0.69
+        },
+        {
+          "interface": "stock_sector_fund_flow_rank",
+          "parameters": {
+            "indicator": "今日",
+            "sector_type": "行业资金流"
+          },
+          "collected_at": "2026-10-11T20:08:38+08:00",
+          "status": "error",
+          "error": "ProxyError",
+          "rows": 0,
+          "fields": [],
+          "akshare_version": null,
+          "duration_seconds": 5.66
+        }
+      ]
+    },
+    {
+      "interface": "stock_zh_a_hist_tx",
+      "parameters": {
+        "symbol": "sh601001",
+        "adjust": "",
+        "start_date": "20260325",
+        "end_date": "20261011"
+      },
+      "collected_at": "2026-10-11T20:08:38+08:00",
+      "status": "ok",
+      "error": null,
+      "rows": 132,
+      "fields": [
+        "date",
+        "open",
+        "close",
+        "high",
+        "low",
+        "volume",
+        "turnover",
+        "amount"
+      ],
+      "akshare_version": "1.19.1",
+      "duration_seconds": 0.94,
+      "key": "tencent_probe",
+      "attempt_count": 1,
+      "attempt_history": [
+        {
+          "interface": "stock_zh_a_hist_tx",
+          "parameters": {
+            "symbol": "sh601001",
+            "adjust": "",
+            "start_date": "20260325",
+            "end_date": "20261011"
+          },
+          "collected_at": "2026-10-11T20:08:38+08:00",
+          "status": "ok",
+          "error": null,
+          "rows": 132,
+          "fields": [
+            "date",
+            "open",
+            "close",
+            "high",
+            "low",
+            "volume",
+            "turnover",
+            "amount"
+          ],
+          "akshare_version": "1.19.1",
+          "duration_seconds": 0.94
+        }
+      ]
+    }
+  ],
+  "data_quality": {
+    "market_pass": false,
+    "stocks_pass": 0,
+    "expected_quote_date": "2026-10-09"
+  }
+}
