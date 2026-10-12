@@ -24,6 +24,7 @@ dist/
 private/
 /beta01-artifacts/
 /beta02-artifacts/
+/beta03-artifacts/
 raw_data/
 backups/
 *.ledger.json

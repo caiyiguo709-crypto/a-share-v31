@@ -1,10 +1,10 @@
-name: V3.1 Beta 0.2 manual diagnostic (no deployment)
+name: V3.1 Beta 0.3B manual diagnostic (no deployment)
 on:
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: beta02-diagnostic-${{ github.ref }}
+  group: beta03-diagnostic-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   diagnose:
@@ -22,30 +22,33 @@ jobs:
           cache: pip
           cache-dependency-path: requirements.lock
       - name: Initialize failure evidence
-        run: python -m poc.cloud_report finalize
+        run: python -m poc.cloud_report_beta03 finalize
         # No probes/tests yet; initialize NOT_RUN evidence without treating it as acceptance.
         continue-on-error: true
       - name: Install audited dependencies
         run: python -m pip install -r requirements.lock
+      - name: Install pinned isolated public-index SDK
+        run: python -m poc.cloud_report_beta03 install-dependency
       - name: Fresh tests and real network diagnostics
         if: ${{ always() }}
-        run: python -m poc.cloud_report run
+        run: python -m poc.cloud_report_beta03 run
       - name: Finalize acceptance evidence even on failure
         if: ${{ always() }}
         run: |
-          python -m poc.cloud_report finalize
+          python -m poc.cloud_report_beta03 finalize
       - name: Save sanitized diagnostics only
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: beta02-diagnostic-${{ github.run_id }}-${{ github.run_attempt }}
+          name: beta03-diagnostic-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
-            beta02-artifacts/acceptance.json
-            beta02-artifacts/acceptance.md
-            beta02-artifacts/original-tests.json
-            beta02-artifacts/backup-tests.json
-            beta02-artifacts/cloud_contracts-tests.json
-            beta02-artifacts/decoder_beta02-tests.json
-            beta02-artifacts/sha256.json
+            beta03-artifacts/acceptance.json
+            beta03-artifacts/acceptance.md
+            beta03-artifacts/original-tests.json
+            beta03-artifacts/backup-tests.json
+            beta03-artifacts/cloud_contracts-tests.json
+            beta03-artifacts/decoder_beta02-tests.json
+            beta03-artifacts/index_beta03-tests.json
+            beta03-artifacts/sha256.json
           if-no-files-found: error
           retention-days: 3
