@@ -98,6 +98,51 @@ def encoded_sina_payload(text, symbol):
     return match.group(1)
 
 
+def decoder_details(module):
+    """Describe the SDK's actual import, without publishing machine paths."""
+    import inspect
+    from importlib.metadata import version, PackageNotFoundError
+    backend = module.py_mini_racer
+    cls = backend.MiniRacer
+    packages = {}
+    for name in ('akshare', 'mini-racer', 'py-mini-racer', 'akracer'):
+        try: packages[name] = version(name)
+        except PackageNotFoundError: packages[name] = None
+    return {'import_module': backend.__name__, 'module_file': Path(backend.__file__).name,
+            'class_module': cls.__module__, 'class_file': Path(inspect.getfile(cls)).name,
+            'context_manager': hasattr(cls, '__enter__') and hasattr(cls, '__exit__'),
+            'close_method': callable(getattr(cls, 'close', None)), 'packages': packages}
+
+
+def decode_sina_records(module, encoded):
+    decoder = module.py_mini_racer.MiniRacer()
+    try:
+        decoder.eval(module.hk_js_decode)
+        records = decoder.call('d', encoded)
+    finally:
+        # Legacy/akracer releases free the V8 context in __del__, without a close API.
+        # Modern releases expose close; do not require the optional context protocol.
+        close = getattr(decoder, 'close', None)
+        if callable(close): close()
+    if not isinstance(records, list) or not records or any(not isinstance(r, dict) for r in records):
+        raise ValueError('decoded Sina result is not a nonempty record list')
+    return records
+
+
+def sina_window(records, start, end):
+    selected = []
+    for record in records:
+        day = datetime.fromisoformat(str(record.get('date', 'invalid'))).date().isoformat()
+        if day > datetime.now(TZ).date().isoformat():
+            raise ValueError('decoded Sina date is in the future')
+        if start <= day <= end:
+            if any(key not in record for key in ('date', 'open', 'high', 'low', 'close', 'volume', 'amount')):
+                raise ValueError('decoded Sina record missing required fields')
+            selected.append(record)
+    if not selected: raise ValueError('decoded Sina window is empty')
+    return selected
+
+
 def index_records(records, adapter):
     if adapter == 'index_em':
         aliases = dict(zip(('日期', '开盘', '最高', '最低', '收盘', '成交量', '成交额'),
@@ -188,13 +233,11 @@ def child():
                 # Decode pinned SDK's codec directly: avoid stock_zh_a_daily's ffill/drop_duplicates.
                 encoded = encoded_sina_payload(response.text, symbol)
                 stage = 'decode'
-                with module.py_mini_racer.MiniRacer() as decoder:
-                    decoder.eval(module.hk_js_decode)
-                    records = decoder.call('d', encoded)
+                packet['decoder'] = decoder_details(module)
+                records = decode_sina_records(module, encoded)
                 stage = 'normalization'
                 packet['raw_records'] = records
-                packet['bars'] = normalize_records([r for r in records
-                    if request['start'] <= str(r.get('date', ''))[:10] <= request['end']])
+                packet['bars'] = normalize_records(sina_window(records, request['start'], request['end']))
             elif index_adapter:
                 if adapter == 'index_sina':
                     frame = ak.stock_zh_index_daily(symbol=('sh' if code == '000001' else 'sz') + code)

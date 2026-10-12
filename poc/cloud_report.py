@@ -1,4 +1,4 @@
-"""Beta 0.1 evidence runner. No account data, publication or trading paths."""
+"""Beta 0.2 evidence runner. No account data, publication or trading paths."""
 import argparse
 import hashlib
 import json
@@ -12,12 +12,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WORK = ROOT / 'private' / 'beta01'
-OUT = ROOT / 'beta01-artifacts'
+WORK = ROOT / 'private' / 'beta02-cloud'
+OUT = ROOT / 'beta02-artifacts'
 COUNTS = ('PASS', 'FAIL', 'BLOCKED_DEPENDENCY', 'PENDING_SESSION', 'NOT_RUN')
-GROUPS = {'original': (103, ['tests', '--ignore=tests/test_backup_poc.py', '--ignore=tests/test_cloud_poc.py']),
+GROUPS = {'original': (103, ['tests', '--ignore=tests/test_backup_poc.py', '--ignore=tests/test_cloud_poc.py',
+                            '--ignore=tests/test_decoder_beta02.py']),
           'backup': (38, ['tests/test_backup_poc.py']),
-          'cloud_contracts': (None, ['tests/test_cloud_poc.py'])}
+          'cloud_contracts': (11, ['tests/test_cloud_poc.py']),
+          'decoder_beta02': (27, ['tests/test_decoder_beta02.py'])}
 
 
 def save(path, value):
@@ -48,7 +50,7 @@ def public_packet(packet):
     fields = ('adapter', 'upstream', 'interface', 'code', 'basis', 'volume_unit', 'amount_unit',
               'status', 'evidence_kind', 'started_at', 'collected_at', 'akshare_version',
               'application_attempts', 'explicit_retries', 'sdk_http_attempts', 'duration_seconds',
-              'failure_stage', 'error_chain', 'unit_conversion')
+              'failure_stage', 'error_chain', 'unit_conversion', 'decoder')
     result = {k: packet[k] for k in fields if k in packet}
     result['http_requests'] = [{k: event[k] for k in ('method', 'http_status', 'started_at', 'proxy_configured', 'error_chain')
                                 if k in event} for event in packet.get('http_requests', [])]
@@ -81,7 +83,7 @@ def finalize():
     # COMPLETE above refers ONLY to one-run Beta scope; production acceptance is always false.
     sha = os.environ.get('GITHUB_SHA', '')
     run_id = os.environ.get('GITHUB_RUN_ID', '')
-    report = {'scope': 'V3.1 Beta 0.1 one manual diagnostic run; not production acceptance',
+    report = {'scope': 'V3.1 Beta 0.2 one manual diagnostic run; not production acceptance',
               'status': status, 'generated_at': datetime.now(timezone.utc).isoformat(),
               'commit': sha if re.fullmatch(r'[0-9a-f]{40}', sha) else None,
               'run_url': f'https://github.com/caiyiguo709-crypto/a-share-v31/actions/runs/{run_id}' if run_id.isdigit() else None,
@@ -91,13 +93,14 @@ def finalize():
               'buy_permission': False, 'research_permission': False, 'production_accepted': False,
               'remaining': ['five real trading sessions', 'metadata', 'corporate actions', 'industry', 'funds',
                             'index Sina volume unit/amount certification', 'core integration separately approved'],
-              'commands': {'original': 'python -m pytest tests --ignore=tests/test_backup_poc.py --ignore=tests/test_cloud_poc.py',
+              'commands': {'original': 'python -m pytest tests --ignore=tests/test_backup_poc.py --ignore=tests/test_cloud_poc.py --ignore=tests/test_decoder_beta02.py',
                            'backup': 'python -m pytest tests/test_backup_poc.py',
                            'cloud_contracts': 'python -m pytest tests/test_cloud_poc.py',
-                           'network': 'python -m poc.backup_sources --include-indices --output private/beta01/network.json'}}
+                           'decoder_beta02': 'python -m pytest tests/test_decoder_beta02.py',
+                           'network': 'python -m poc.backup_sources --include-indices --output private/beta02-cloud/network.json'}}
     save(OUT / 'acceptance.json', report)
     for name, group in groups.items(): save(OUT / (name + '-tests.json'), group)
-    lines = ['# V3.1 Beta 0.1 云端验收', '', f"状态：**{status}**（仅本次诊断；正式系统未验收）", '',
+    lines = ['# V3.1 Beta 0.2 云端验收', '', f"状态：**{status}**（仅本次诊断；正式系统未验收）", '',
              f"Commit：{report['commit']}", f"运行：{report['run_url']}", '',
              '| 测试组 | 状态 | PASS | FAIL | NOT_RUN |', '|---|---|---:|---:|---:|']
     for name, group in groups.items():

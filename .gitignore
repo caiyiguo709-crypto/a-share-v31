@@ -23,6 +23,7 @@ dist/
 # Private account state, market archives and local exports
 private/
 /beta01-artifacts/
+/beta02-artifacts/
 raw_data/
 backups/
 *.ledger.json

@@ -1,10 +1,10 @@
-name: V3.1 Beta 0.1 manual diagnostic (no deployment)
+name: V3.1 Beta 0.2 manual diagnostic (no deployment)
 on:
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: beta01-diagnostic-${{ github.ref }}
+  group: beta02-diagnostic-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   diagnose:
@@ -38,13 +38,14 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
-          name: beta01-diagnostic-${{ github.run_id }}-${{ github.run_attempt }}
+          name: beta02-diagnostic-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
-            beta01-artifacts/acceptance.json
-            beta01-artifacts/acceptance.md
-            beta01-artifacts/original-tests.json
-            beta01-artifacts/backup-tests.json
-            beta01-artifacts/cloud_contracts-tests.json
-            beta01-artifacts/sha256.json
+            beta02-artifacts/acceptance.json
+            beta02-artifacts/acceptance.md
+            beta02-artifacts/original-tests.json
+            beta02-artifacts/backup-tests.json
+            beta02-artifacts/cloud_contracts-tests.json
+            beta02-artifacts/decoder_beta02-tests.json
+            beta02-artifacts/sha256.json
           if-no-files-found: error
           retention-days: 3
