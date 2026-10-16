@@ -3,6 +3,7 @@ import json
 import sys
 
 ALLOWED = {"tool_trade_date_hist_sina", "index_zh_a_hist", "stock_zh_a_hist", "stock_zh_a_spot_em",
+           "stock_info_sh_name_code", "stock_info_sz_name_code",
            "stock_sector_fund_flow_rank", "stock_zh_a_hist_tx", "stock_zh_index_daily", "stock_zh_index_daily_tx",
            "stock_individual_info_em", "stock_individual_fund_flow", "stock_board_industry_hist_em", "stock_sector_fund_flow_hist"}
 
