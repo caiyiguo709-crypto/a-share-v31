@@ -52,7 +52,41 @@ def main():
             p.add_argument('--allow-synthetic',action='store_true')
     export=subs.add_parser('export-trades');export.add_argument('--ledger',default=str(PRIVATE/'paper-ledger.json'))
     export.add_argument('--output',default=str(PRIVATE/'trades.csv'))
+    v41=subs.add_parser('v41-scan',help='V4.1全主板收盘快照扫描；只生成研究候选')
+    v41.add_argument('--snapshot',required=True);v41.add_argument('--state',default=str(PRIVATE/'v41-state.json'))
+    v41replay=subs.add_parser('v41-replay',help='回放逐日时点快照；不计算交易收益')
+    v41replay.add_argument('--input',required=True);v41replay.add_argument('--output',default=str(PRIVATE/'v41-replay.json'))
+    v41collect=subs.add_parser('v41-collect',help='采集当前沪深主板全市场研究快照；不赋予交易许可')
+    v41collect.add_argument('--timeout',type=int,default=18)
+    v41collect.add_argument('--output')
     args=parser.parse_args()
+    if args.command=='v41-scan':
+        from .v41 import scan_file
+        result=scan_file(args.snapshot,args.state)
+        print(json.dumps({'asof':result['asof'],'universe_count':result['universe_count'],
+                          'coverage_complete':result['coverage_complete'],'candidates':len(result['candidates']),
+                          'buy_permission':False,'state':args.state},ensure_ascii=False))
+        return
+    if args.command=='v41-replay':
+        from .v41 import replay
+        result=replay(load_json(args.input)['snapshots'])
+        atomic_json(args.output,result)
+        print(json.dumps({'asof':result['asof'],'candidates':len(result['candidates']),
+                          'metrics':result['replay_metrics'],
+                          'buy_permission':False,'output':args.output},ensure_ascii=False))
+        return
+    if args.command=='v41-collect':
+        from .v41 import collect_daily
+        result=collect_daily(args.timeout)
+        stamp=result['captured_at'].replace(':','').replace('+','_')
+        output=args.output or str(PRIVATE/'v41-snapshots'/(stamp+'.json'))
+        if Path(output).exists():raise ValueError('当日快照已存在，不覆盖时点档案')
+        atomic_json(output,result)
+        print(json.dumps({'asof':result['asof'],'universe_count':len(result['universe']),
+                          'coverage_complete':result['universe_complete'],
+                          'collection_failures':len(result['collection_failures']),
+                          'buy_permission':False,'output':output},ensure_ascii=False))
+        return
     if args.command=='build':
         if args.input:
             raw=load_json(args.input)

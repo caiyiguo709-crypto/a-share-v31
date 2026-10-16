@@ -1,5 +1,13 @@
 # 5000元A股智能选股系统 V3.1
 
+## V4.1 研究候选模块（独立、未接入实盘）
+
+已新增全沪深主板收盘研究扫描及三级候选账本。每天收盘后先运行 `python -m ashare.cli v41-collect`，它读取上交所、深交所主板清单和逐只腾讯未复权日线，默认归档到 `private/v41-snapshots/采集时间.json`，不会覆盖先前快照。再用 `python -m ashare.cli v41-scan --snapshot private/v41-snapshots/采集时间.json` 更新 `private/v41-state.json`。完整时点快照集合可用 `python -m ashare.cli v41-replay --input private/v41-dataset.json` 顺序回放首次发现和阶段变化；不计算收益，输入为 `{"snapshots":[逐日快照...]}`。
+
+快照契约 `v41-snapshot-1`：`asof` 为当日完整交易日，`captured_at` 为同日北京时间 15:00 后实际采集时间；`universe` 为当日全部符合前缀的主板代码，`stocks` 必须逐码覆盖；每只需 `bars`、`name`、`status`、`listed_sessions`、`liquid`。可选 `benchmark_bars` 支持相对强度。市场准入须 `market={"grade":"A或B", "verified":true, "asof":当日}`；证券 P0/P1 须当日核验并标 `quality_asof`；买点须有当日 `entry_asof`；交易计划须显式给出当日 `shares/stop/target/available_cash/open_positions/existing_exposure/open_planned_risk/consecutive_losses/drawdown_pct/asof`。缺字段只会阻断执行阶段，不会被推算补齐。每日快照不能事后改时间重放。
+
+此模块的“交易执行”仅是待人工复核候选；所有输出 `buy_permission=false`，不调用券商，也不改变 V3.1 原有 50 元模拟账本与交易门禁。全市场采集尚未完成真实运行和独立来源核验，`coverage_complete` 还要求两所公开清单来源和至少 2500 只主板代码的保守完整性检查；这仍不能证明名单和价格均完整无误。详细规则与交通银行案例见本仓库 `docs/V4.1-KNOWLEDGE-BASE.md`。
+
 **第二阶段本地研究与模拟版本；第三阶段3.1诊断已完成，核心行情重构待确认。网站未发布。**
 
 已实现五维100分规则、行业资金适配、时点快照回测和本地模拟账本。真实接口取得7只股票及三指数日线，但独立来源、证券状态、行业和资金链路尚未完整通过，当前真实研究许可为0。合成演示验证流程，不代表真实策略收益。
